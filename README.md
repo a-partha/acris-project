@@ -6,12 +6,12 @@ This project demonstrates how to build a modern, local ELT (Extract, Load, Trans
 
 ## Pipeline Stack
 - **Data Source:** NYC ACRIS Real Property Legals (official open dataset)
-- **API/ETL:** Python for data retrieval and automation
+- **API/ELT:** Python for data retrieval and automation
 - **Database:** DuckDB (local, lightweight OLAP database)
 - **Transformation:** dbt (data build tool) for modular, production-style data modeling
 - **Preprocessing & Feature Engineering:** Python, Pandas
 - **Vector Search:** Scikit-learn (TF-IDF vectorization, Nearest Neighbors search)
-- **AI/LLM Integration:** OpenAI GPT (for Q&A over structured data)
+- **AI/LLM Integration:** Google's Gemini-1.5-flash (for Q&A over structured data)
 
 ## What the Pipeline Does
 1. **Pulls Raw Data**: Retrieves legal property record filings via NYC’s public API. Stores as structured CSV for reproducibility.
@@ -33,7 +33,7 @@ This project demonstrates how to build a modern, local ELT (Extract, Load, Trans
 5. **Vectorization**: Uses Scikit-learn’s TF-IDF to embed summaries, creating a vector index for semantic search (finds similar records by meaning).
 6. **Retrieval-Augmented Generation**:
    - For any user question, retrieves the most relevant filings using the vector index
-   - Passes those records as context to an LLM (OpenAI GPT) to generate a natural-language answer
+   - Passes those records as context to an LLM (Google Gemini) to generate a natural-language answer
 
 ## Key Results & Learnings
 - Built a fully local ELT+AI pipeline—no cloud dependencies
@@ -59,7 +59,4 @@ The pipeline retrieves the record, decodes the borough, and generates the answer
 - `/notebooks` – Pipeline notebooks and experiments
 - `/dbt` – dbt project for data modeling
 - `/data` – Raw and processed data snapshots
-- `/scripts` – Standalone ETL and AI modules
-
-
-**Author:** [Your Name]
+- `/scripts` – Standalone ELT and AI modules
