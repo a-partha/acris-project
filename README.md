@@ -21,7 +21,7 @@ This project demonstrates how to build a modern, local ELT (Extract, Load, Trans
 5. **Builds Vector Index**: Trains a TF-IDF model to embed those descriptions and enables fast similarity search with NearestNeighbors.
 6. **Retrieves and Answers**: Given a user question, finds the most relevant filings and sends their summaries to an LLM to generate answers.
 
-## Step-by-Step Workflow
+## Workflow
 1. **Data Extraction**: Python scripts connect to the ACRIS API and batch-download raw property legal records (fields like `document_id`, `borough`, `property_type`, etc).
 2. **Initial Data Storage**: Stores the raw records as CSV for reproducible downstream processing.
 3. **Transformation and Modeling**: Uses dbt models to:
@@ -35,20 +35,20 @@ This project demonstrates how to build a modern, local ELT (Extract, Load, Trans
    - For any user question, retrieves the most relevant filings using the vector index
    - Passes those records as context to an LLM (Google Gemini) to generate a natural-language answer
 
-## Key Results & Learnings
+## Key Results
 - Built a fully local ELT+AI pipeline—no cloud dependencies
 - Modeled legal data to be both analyst- and AI-ready (plain English, not just codes)
 - Demonstrated how dbt and DuckDB can power rapid prototyping and modular pipelines for legal/real estate data
 - Showed how vector search and LLMs enable natural-language Q&A over structured public data
 
-## Skills & Experience Demonstrated
+## Skills Demonstrated
 - **Pipeline Engineering:** End-to-end data ingestion, modeling, and deployment using modern open-source tools
 - **Data Transformation:** dbt workflow, code-to-label mapping, clean data modeling
 - **Feature Engineering:** Turning structured records into AI-ready natural language summaries
 - **Vector Search/AI:** Building vector indexes for retrieval-augmented LLM question answering
 - **Documentation & Reproducibility:** All steps are modular, documented, and reproducible for real-world analytics workflows
 
-## Example Use Case
+## Example Prompt
 > “What borough is document 2025061800453002 in?”
 
 The pipeline retrieves the record, decodes the borough, and generates the answer in plain English using the data dictionary mapping and the AI model.
