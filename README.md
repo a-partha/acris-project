@@ -14,7 +14,7 @@ This project demonstrates how to build a modern, local ELT (Extract, Load, Trans
 - **AI/LLM Integration:** Google's Gemini-1.5-flash (for Q&A over structured data)
 
 ## What the Pipeline Does
-1. **Pulls Raw Data**: Retrieves legal property record filings via NYC’s public API. Stores as structured CSV for reproducibility.
+1. **Pulls Raw Data**: Retrieves legal property record filings via NYC’s public API (500k out of 22M records). Stores as structured CSV for reproducibility.
 2. **Models Data with dbt & DuckDB**: Implements a dbt project that cleans, transforms, and documents the ACRIS dataset inside a local DuckDB instance.
 3. **Maps Codes to Plain English**: Uses the official data dictionary to translate coded fields (e.g., borough numbers, document types) into human-readable labels.
 4. **Preps for AI Search**: Creates natural language descriptions of each record to make the data searchable by meaning, not just keyword.
