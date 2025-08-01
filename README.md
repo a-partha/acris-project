@@ -1,8 +1,8 @@
 
 # NYC ACRIS Legal Data Pipeline with AI Integration
-
+https://colab.research.google.com/drive/1AIMNu4vpYDscomYriE0XlGBezJEJf_Le?usp=sharing
 ## Project Overview
-This project demonstrates how to build a modern, local ELT (Extract, Load, Transform) pipeline using public legal-property records from NYC’s ACRIS (Automated City Register Information System) dataset. The goal is to structure raw legal filings data for analytics and power intelligent question-answering using AI models—all without relying on cloud resources.
+This project demonstrates how to build a modern, local ELT (Extract, Load, Transform) pipeline using public legal-property records from NYC’s ACRIS (Automated City Register Information System) dataset. The goal is to structure raw legal filings data for analytics and power intelligent question-answering using AI models. The project was built with the help of Open AI's ChatGPT agent mode.
 
 ## Pipeline Stack
 - **Data Source:** NYC ACRIS Real Property Legals (official open dataset)
